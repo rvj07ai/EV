@@ -1,24 +1,24 @@
 # Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
-*.jpg
-*.jpeg
-*.png
-*.bmp
-*.tif
-*.tiff
-*.heic
-*.JPG
-*.JPEG
-*.PNG
-*.BMP
-*.TIF
-*.TIFF
-*.HEIC
-*.mp4
-*.mov
-*.MOV
-*.avi
+#*.jpg
+#*.jpeg
+#*.png
+#*.bmp
+#*.tif
+#*.tiff
+#*.heic
+#*.JPG
+#*.JPEG
+#*.PNG
+#*.BMP
+#*.TIF
+#*.TIFF
+#*.HEIC
+#*.mp4
+#*.mov
+#*.MOV
+#*.avi
 *.data
-*.json
+#*.json
 
 *.cfg
 !cfg/yolov3*.cfg
@@ -31,8 +31,7 @@ results*.txt
 gcp_test*.sh
 
 # Datasets -------------------------------------------------------------------------------------------------------------
-# coco/
-# VOC/
+
 
 # MATLAB GitIgnore -----------------------------------------------------------------------------------------------------
 *.m~
