@@ -19,7 +19,7 @@
 #*.avi
 *.data
 #*.json
-
+.vscode
 *.cfg
 !cfg/yolov3*.cfg
 
