@@ -58,7 +58,9 @@ names: ['person', 'car']
 #     print(i, x)
 
 ```
-Tweak the yolo5s.yaml file
+Tweak the yolov5s.yaml file :
+# number of classes
+nc: 2
 ```
 # parameters
 nc: 2  # number of classes
