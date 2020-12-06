@@ -1,4 +1,79 @@
 
+## Training on Custom Data and Detection ##
+
+- We are going to use YOLO v5 model architecture which is a single-stage object detector . It got open-sourced on May 30, 2020 by Glenn Jocher from ultralytics
+  There is no published paper, but [the complete project is on GitHub.](https://github.com/ultralytics/yolov5)
+
+- YOLO v5 uses PyTorch 
+
+- We are going to clone the repo and do necessary changes accordingly to suit our problem statement 
+
+- We will be fine-tuning  pre-trained model version. Take a look at the overview of the [pre-trained checkpoints](https://github.com/ultralytics/yolov5/blob/f9ae460eeccd30bdc43a89a37f74b9cc7b93d52f/README.md#pretrained-checkpoints)
+We’ll use the largest model YOLOv5x (89M parameters), which is also the most accurate.
+
+- To train a model on a custom dataset, we’ll call the train.py script. We’ll pass a couple of parameters:
+```
+img 640 - resize the images to 640x640 pixels
+batch 16 - 16 images per batch
+epochs 30 - train for 30 epochs
+data ./data/sampledata.yaml - path to dataset config
+cfg ./models/yolov5s.yaml - model config
+weights yolov5s.pt - use pre-trained weights from the YOLOv5x model
+name yolov5s_ev - name of our model
+cache - cache dataset images for faster training
+```
+- We can train either 
+   1) Using pretrained by passing ```--weights yolov5s.pt``` (recommended)
+   2) Randomly initialized by passing  ```--weights ''``` (not recommended)
+
+-  Pretrained weights are auto-downloaded from the latest [YOLOv5 release](https://github.com/ultralytics/yolov5/releases)
+
+
+
+
+### Requirements ###
+Python 3.7 or later with all requirements.txt dependencies installed, including torch=>1.6.0 and torchvision>=0.7.0 
+
+
+To install run:
+```
+pip install -r requirements.txt
+pip install torch==1.6.0 torchvision==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+
+
+## Evaluation ## 
+Mean Average Precision : The Mean Average Precision or mAP score is calculated by taking the mean AP over all classes and/or over all IoU thresholds, 
+- mAP@.5 
+- mAP@[.5:.95] 
+For this task , we have taken the mAP was averaged over both the object categories and all 10 IoU thresholds. As we can see below the mAP increased as training increased .
+Best mAP@.5 : 652
+Best mAP@[.5:.95]  : .348
+![alt text](https://github.com/rvj07ai/EV/blob/main/Object_Detection/code/yolo-5s-model/runs/train/yolov5s_ev/results.png)
+
+## Making predictions ##
+Took some images  from the validation set and some from web and move them to inference/images to see how our model does on those:
+
+We’ll use the detect.py script to run our model on the images. Here are the parameters we’re using:
+```
+python detect.py --device 0 --weights runs/train/yolov5s_ev/weights/best.pt --img 640 --conf 0.4 --source ./inference/images/ --name yolov5s_ev
+```
+
+```
+weights runs/train/yolov5s_ev/weights/best.pt - checkpoint of the model
+img 640 - resize the images to 640x640 px
+conf 0.4 - take into account predictions with confidence of 0.4 or higher
+source ./inference/images/ - path to the images
+```
+
+
+
+
+### Train on Custom Data  ###
+- The training took around 2 hour  on GeForce RTX 2060. 
+- The best model checkpoint is saved to runs/train/yolo5s_ev/weights/best.pt.
+
 ```
 D:\Object_Detection\code\yolo-5s-model>python train.py --img 640 --batch 16 --epochs 30 --data ./data/sampledata.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt  --name yolov5s_ev --cache
 Using torch 1.6.0+cu101 CUDA:0 (GeForce RTX 2060, 6144MB)
