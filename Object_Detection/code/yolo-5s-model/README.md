@@ -59,8 +59,7 @@ names: ['person', 'car']
 
 ```
 ## Tweak the yolov5s.yaml file : ##
- - number of classes
- - nc: 2
+ - number of classes (nc): 2
 ```
 # parameters
 nc: 2  # number of classes
