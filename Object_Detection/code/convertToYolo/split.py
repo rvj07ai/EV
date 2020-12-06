@@ -10,10 +10,10 @@ image_index = list(range(0,len(image_ids)))
 random.shuffle(image_index)
 x_train ,x_valid = train_test_split(image_index,test_size=0.2,random_state =455)  
 
-train_path = 'D:\\EagleView\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\images\\train'
-val_path = 'D:\\EagleView\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\images\\val'
-train_label_path = 'D:\\EagleView\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\labels\\train'
-val_label_path = 'D:\\EagleView\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\labels\\val'
+train_path = 'D:\\ev\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\images\\train'
+val_path = 'D:\\ev\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\images\\val'
+train_label_path = 'D:\\ev\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\labels\\train'
+val_label_path = 'D:\\ev\\Object_Detection\\code\\yolo-5s-model\\data\\coco\\labels\\val'
 if not os.path.exists(train_path):
     os.makedirs(train_path)
 if not os.path.exists(val_path):
