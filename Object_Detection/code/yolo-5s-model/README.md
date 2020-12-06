@@ -47,7 +47,7 @@ pip install torch==1.6.0 torchvision==0.7.0 -f https://download.pytorch.org/whl/
 Mean Average Precision : The Mean Average Precision or mAP score is calculated by taking the mean AP over all classes and/or over all IoU thresholds, 
 - mAP@.5 
 - mAP@[.5:.95] 
-For this task , we have taken the mAP was averaged over both the object categories and all 10 IoU thresholds. As we can see below the mAP increased as training increased .
+For this task , we have taken the mAP that was averaged over both the object categories and all 10 IoU thresholds. As we can see below the mAP increased as training increased .
 Best mAP@.5 : 652
 Best mAP@[.5:.95]  : .348
 ![alt text](https://github.com/rvj07ai/EV/blob/main/Object_Detection/code/yolo-5s-model/runs/train/yolov5s_ev/results.png)
@@ -66,7 +66,9 @@ img 640 - resize the images to 640x640 px
 conf 0.4 - take into account predictions with confidence of 0.4 or higher
 source ./inference/images/ - path to the images
 ```
+Eg: 
 
+![alt text](https://github.com/rvj07ai/EV/blob/main/Object_Detection/code/yolo-5s-model/runs/detect/yolov5s_ev/image_000000043.jpg)
 
 
 
