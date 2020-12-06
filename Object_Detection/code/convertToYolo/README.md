@@ -1,4 +1,13 @@
-# convert2Yolo
+## Pre-process the data ##
+- Convert2Yolo - Convert the coco format data into Yolo format
+- Split into Training and Validation set 
+
+
+### convert2Yolo ###
+
+First things First , we need to convert the coco format data into Yolo format , we are going to use the utilities in this repo to achieve the same
+
+
 
 Object Detection annotation Convert to [Yolo Darknet](https://pjreddie.com/darknet/yolo/) Format
 
@@ -25,11 +34,11 @@ pip3 install -r requirements.txt
 
 Each dataset requires some parameters :
 
-See [convert.py]()
+See [convert.py](https://github.com/rvj07ai/EV/blob/main/Object_Detection/code/convertToYolo/convert.py)
 
 1. --datasets
 
-   - like a COCO / VOC / UDACITY / KITTI
+   - like a COCO / VOC / KITTI
 
      ```bash
      --datasets COCO
@@ -193,14 +202,10 @@ Now check result files (`~/coco/labels`)
 ​     
 ​    
 
-### TODO
+### Split the dataset into train and valid as below
 
-**Refactoring (Release v2.0.0)**
-- [ ] Add strict Type Annotation in code
-- [ ] Separate role in class more strictly 
-- [ ] Rewrite README.md for more helpful use first
-- [ ] Resolve the problem that strictly validation check when the trivial error
-- [ ] Supported Multiprocessing
-- [ ] Skip object class that don't want
+![alt text](https://github.com/rvj07ai/EV/blob/main/Object_Detection/code/convertToYolo/train_data.JPG)
+
+
 
 
