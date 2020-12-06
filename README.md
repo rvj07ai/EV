@@ -1,6 +1,6 @@
-# EV
- Case Study
+## EV Case Study ##
 
+### Step 1 : ###
 
 [Convert Data to Yolo format](https://github.com/rvj07ai/EV/tree/main/Object_Detection/code/convertToYolo)
 
