@@ -202,7 +202,11 @@ Now check result files (`~/coco/labels`)
 ​     
 ​    
 
-### Split the dataset into train and valid as below
+### Split the dataset into train and valid as below ###
+
+```
+python split.py
+```
 
 ![alt text](https://github.com/rvj07ai/EV/blob/main/Object_Detection/code/convertToYolo/train_data.JPG)
 
