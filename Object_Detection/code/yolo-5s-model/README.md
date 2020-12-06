@@ -29,7 +29,35 @@ cache - cache dataset images for faster training
 -  Pretrained weights are auto-downloaded from the latest [YOLOv5 release](https://github.com/ultralytics/yolov5/releases)
 
 
+### Set up the data yaml ###
+- Change nc to number of objects
+- names: ['person', 'car']
+```
+# COCO 2017 dataset http://cocodataset.org
+# Train command: python train.py --data coco.yaml
+# Default dataset location is next to /yolov5:
+#   /parent_folder
+#     /coco
+#     /yolov5
 
+
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: coco/images/train/
+val: coco/images/val/
+# number of classes
+nc: 2
+
+# class names
+names: ['person', 'car']
+
+# Print classes
+# with open('data/coco.yaml') as f:
+#   d = yaml.load(f, Loader=yaml.FullLoader)  # dict
+#   for i, x in enumerate(d['names']):
+#     print(i, x)
+
+```
 
 ### Requirements ###
 Python 3.7 or later with all requirements.txt dependencies installed, including torch=>1.6.0 and torchvision>=0.7.0 
