@@ -6,8 +6,7 @@ Support DataSet :
 
 1. COCO
 2. VOC
-3. UDACITY Object Detection
-4. KITTI 2D Object Detection
+3. KITTI 2D Object Detection
 
 ​    
 

@@ -2,7 +2,7 @@ weights: yolov5s.pt
 cfg: ./models/yolov5s.yaml
 data: ./data/sampledata.yaml
 hyp: data/hyp.scratch.yaml
-epochs: 20
+epochs: 30
 batch_size: 16
 img_size:
 - 640
@@ -25,9 +25,9 @@ local_rank: -1
 log_imgs: 16
 workers: 8
 project: runs/train
-name: yolov5s_eagleview
+name: yolov5s_ev
 exist_ok: false
 total_batch_size: 16
 world_size: 1
 global_rank: -1
-save_dir: runs\train\yolov5s_eagleview5
+save_dir: runs\train\yolov5s_ev
