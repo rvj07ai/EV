@@ -9,7 +9,7 @@
 - We are going to clone the repo and do necessary changes accordingly to suit our problem statement 
 
 - We will be fine-tuning  pre-trained model version. Take a look at the overview of the [pre-trained checkpoints](https://github.com/ultralytics/yolov5/blob/f9ae460eeccd30bdc43a89a37f74b9cc7b93d52f/README.md#pretrained-checkpoints)
-We’ll use the largest model YOLOv5x (89M parameters), which is also the most accurate.
+We’ll use the smallest model YOLOv5s 
 
 - To train a model on a custom dataset, we’ll call the train.py script. We’ll pass a couple of parameters:
 ```
