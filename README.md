@@ -6,4 +6,4 @@
 
 ### Step 2 : ###
 
-### [Object Detection : Training on Custom Dataset using Yolov5 Model](https://github.com/rvj07ai/EV/tree/main/Object_Detection/code/yolo-5s-model) ###
+### [Object Detection : Training on Custom Dataset using Yolov5s Model](https://github.com/rvj07ai/EV/tree/main/Object_Detection/code/yolo-5s-model) ###
